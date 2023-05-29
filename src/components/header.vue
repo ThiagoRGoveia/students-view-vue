@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "header",
+  name: "headerComp",
 };
 </script>
 
@@ -32,11 +32,5 @@ header {
 .header-text {
   font-size: larger;
   align-self: center;
-}
-
-@media screen and (min-width: 1022px) {
-  header.app-header {
-    width: 100%;
-  }
 }
 </style>

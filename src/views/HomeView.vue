@@ -1,5 +1,7 @@
 <template>
-  <thesis-table />
+  <div class="table">
+    <thesis-table />
+  </div>
 </template>
 
 <script>
@@ -10,3 +12,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.table {
+  max-width: 1000px;
+  margin: auto;
+}
+</style>

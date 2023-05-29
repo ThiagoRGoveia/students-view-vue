@@ -9,47 +9,26 @@
 </template>
 
 <script>
-import header from './header.vue';
-import footer from './footer.vue';
+
+import headerComp from './components/header.vue';
+import footerComp from './components/footer.vue';
 
 export default {
   name: 'App',
   components: {
-    'app-header': header,
-    'app-footer': footer
+    'app-header': headerComp,
+    'app-footer': footerComp
   }
 }
 </script>
 
 <style scoped>
-.app{
-  height: fit-content;
-}
-
-
-nav {
+#app {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  padding: 0;
 }
 
 </style>
