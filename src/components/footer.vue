@@ -14,8 +14,15 @@ export default {
 
 footer {
   display: flex;
-  padding: 20px;
-  background-color: #4992db;
+  width: 100%;
+  background-color: #5b7794;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer-text{
+  margin: 10px;
+  padding: 10px;
 }
 
 </style>

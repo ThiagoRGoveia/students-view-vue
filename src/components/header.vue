@@ -6,6 +6,9 @@
     <div class="header-text">
       <h1>Trabalho de Web Dev</h1>
     </div>
+    <div class="menu">
+      <img src="src/assets/menu.png" alt="menu">
+    </div>
   </header>
 </template>
 
@@ -19,6 +22,7 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 20px;
   background-color: #4992db;
@@ -32,5 +36,21 @@ header {
 .header-text {
   font-size: larger;
   align-self: center;
+}
+
+.menu{
+  display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+  .header-text{
+    display: none;
+  }
+  .menu{
+    display: block;
+    width: 40px;
+    padding: 5px;
+    margin: 5px;
+  }
 }
 </style>

@@ -24,7 +24,8 @@ export default {
 
 <style scoped>
 #app {
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
