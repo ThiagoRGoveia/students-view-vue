@@ -4,10 +4,26 @@
       <img src="src/assets/icmc_logo.png" alt="Logo" />
     </div>
     <div class="header-text">
-      <h1>Trabalho de Web Dev</h1>
-    </div>
-    <div class="menu">
-      <img src="src/assets/menu.png" alt="menu">
+      <b-dropdown aria-role="list">
+        <template #trigger="{ active }">
+          <b-button
+            label="Menu"
+            type="is-dark"
+            :icon-right="active ? 'menu-up' : 'menu-down'"
+          />
+        </template>
+
+        <b-dropdown-item
+          aria-role="listitem"
+          @click="$router.push({ name: 'home' })"
+          >Dissertações</b-dropdown-item
+        >
+        <b-dropdown-item
+          aria-role="listitem"
+          @click="$router.push({ name: 'about' })"
+          >Alunos</b-dropdown-item
+        >
+      </b-dropdown>
     </div>
   </header>
 </template>
@@ -36,21 +52,20 @@ header {
 .header-text {
   font-size: larger;
   align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu{
-  display: none;
+.header-text h1 {
+  margin-right: 20px;
+  margin-bottom: 5px;
 }
-
-@media only screen and (max-width: 1020px) {
-  .header-text{
-    display: none;
-  }
-  .menu{
-    display: block;
-    width: 40px;
-    padding: 5px;
-    margin: 5px;
-  }
+.menu {
+  display: block;
+  width: 40px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
 }
 </style>

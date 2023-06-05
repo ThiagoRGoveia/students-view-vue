@@ -3,23 +3,24 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <router-view />
+    <div class="router-container">
+      <router-view />
+    </div>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-
-import headerComp from './components/header.vue';
-import footerComp from './components/footer.vue';
+import headerComp from "./components/header.vue";
+import footerComp from "./components/footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    'app-header': headerComp,
-    'app-footer': footerComp
-  }
-}
+    "app-header": headerComp,
+    "app-footer": footerComp,
+  },
+};
 </script>
 
 <style scoped>
@@ -32,4 +33,7 @@ export default {
   padding: 0;
 }
 
+.router-container {
+  min-height: 80vh;
+}
 </style>
